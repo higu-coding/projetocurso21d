@@ -1,7 +1,36 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//ESCREVA SEU CÓDIGO AQUI!!
+function Calculadora(numer1, numer2, operador){
+  let result
+  let num1 = parseInt(Number(numer1))
+  let num2 = parseInt(Number(numer2))
+  switch(operador){
+    case '+':
+      result = num1 + num2
+      break;
+    case '-':
+      result = num1 - num2
+      break;
+    case '*':
+      result = num1 * num2
+      break;
+    case '/':
+      result = num1 / num2
+      break;
+    case 'e':
+      let cont = 1
+      result = num1 * num1
+      while(cont < num2 - 1){
+        result = result * num1
+        cont++
+      }
+      break;
+  }
+if(result == undefined || result > 1000000)
+  result = 'ERRO'
+return result
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
